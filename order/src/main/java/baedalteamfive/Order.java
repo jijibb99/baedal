@@ -44,12 +44,12 @@ public class Order {
 
             //Following code causes dependency to external APIs
             // it is NOT A GOOD PRACTICE. instead, Event-Policy mapping is recommended.
-            baedal.external.Delivery delivery = new baedal.external.Delivery();
+            baedalteamfive.external.Delivery delivery = new baedalteamfive.external.Delivery();
             delivery.setId(this.getDeliveryId());
             delivery.setOrderId(this.getId());
             delivery.setStatus(this.getDeliveryStatus());
             // mappings goes here
-            OrderApplication.applicationContext.getBean(baedal.external.DeliveryService.class).cancel(this.getDeliveryId(), delivery);
+            OrderApplication.applicationContext.getBean(baedalteamfive.external.DeliveryService.class).cancel(this.getDeliveryId(), delivery);
         }
     }
 
