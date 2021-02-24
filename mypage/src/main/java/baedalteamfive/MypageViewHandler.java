@@ -1,6 +1,6 @@
 package baedalteamfive;
 
-import baedal.config.kafka.KafkaProcessor;
+import baedalteamfive.config.kafka.KafkaProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.messaging.handler.annotation.Payload;
